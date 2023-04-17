@@ -16,8 +16,8 @@ const refs = {
 
 refs.input.addEventListener("input", debounce(onFetchCountries, DEBOUNCE_DELAY));
 
-function onFetchCountries(event) {
-    const inputValue = event.target.value.trim();
+function onFetchCountries(e) {
+    const inputValue = e.target.value.trim();
     if (!inputValue) {
      clearHtml();   
         return;
